@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cs573 - Assignment 1 - Hello World: GitHub and d3</title>
+    <!-- Foundation Sites(6) - Minified CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Site CSS-->
+    <link rel="stylesheet" href="resources/css/app.css">
+  </head>
+  <body>
+  <!-- Main Layout-->
+  <div class="row">
+    <div class="small-12 columns"><h2>Bestbuy Ad</h2></div>
+  </div>
+  <div class="row">
+    <div class="small 12 medium-8 columns">
+      <div class="stage">
+      </div>
+      <div class="controls">
+        <div class="time-box">
+          <div class="row">
+            <div class="columns small-1 time-play">
+              <a href="" id="play" class="button primary"><i class="fa fa-play" aria-hidden="true"></i></a>
+              <a href="" id="pauseMe" class="button primary"><i class="fa fa-pause" aria-hidden="true"></i></a>
+            </div>
+            <div class="columns small-11 time-slide">
+              <div class="slider" id="playback" data-slider data-initial-start="0" data-end="17848">
+                <span id="playback-hand" class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+                <span class="slider-fill" data-slider-fill></span>
+                <input type="hidden">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns small-12">
+              <div class="box">
+                <h4>Description</h4>
+                <p>This capture shows participant <strong>P01</strong>'s gaze interaction with an ad from a Bestbuy Sunday circular</p>
+                <p><strong>Stage:</strong> 609px x 425px</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="small-12 medium-4 columns">
+      <div class="box">
+        <h3>Toolbox</h3>
+
+        <div class="row">
+          <div class="small-3 columns">
+            <div class="switch">
+              <input class="switch-input" id="showGaze" type="checkbox" name="showGaze">
+              <label class="switch-paddle" for="showGaze">
+                <span class="show-for-sr">Show Gaze Plot</span>
+              </label>
+            </div>
+          </div>
+          <div class="small-9 columns">
+            <p>Show Gaze Plot</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-3 columns">
+            <div class="switch">
+              <input class="switch-input" id="showHeat" type="checkbox" name="showHeat">
+              <label class="switch-paddle" for="showHeat">
+                <span class="show-for-sr">Show Heat Map</span>
+              </label>
+            </div>
+          </div>
+          <div class="small-9 columns">
+            <p>Show Heat Map</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Load Scripts after content -->
+  <!-- JQuery - Minified JavaScript CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
+  <!-- Foundation Sites(6) - Minified JavaScript CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+  <!-- Font Awesome - Minified JavaScript CDN -->
+    <script src="https://use.fontawesome.com/3a760d0b50.js"></script>
+  <!-- Main JS-->
+    <script src="resources/js/main.js"></script>
+</body>
+</html>

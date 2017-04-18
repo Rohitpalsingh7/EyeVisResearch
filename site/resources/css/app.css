@@ -1,0 +1,225 @@
+.stage{
+  width:100%;
+  height:425px;
+  background-color:#333;
+}
+
+.box{
+  background-color:#ECECEC;
+  padding: 1em;
+}
+.time-slide{
+  margin:0;
+}
+.time-slide .slider{
+  margin-bottom:0;
+  margin-top:1rem;
+}
+.time-box{
+  background-color:#ECECEC;
+}
+.time-play .button{
+  margin:0;
+}
+.dot{
+  stroke: white;
+}
+.stage svg{
+  top:25px;
+
+}
+#play,#pauseMe{
+  width:100%;
+
+}
+#pauseMe{
+  display: none;
+}
+.line{
+  fill: none;
+  stroke: #00C3CC;
+  stroke-width: 2px;
+}
+.menu>li>a {
+  color:inherit;
+}
+.bg-blue{
+  background-color:hsl(183, 100%, 40%);
+}
+.bg-blueer{
+  background-color: #257070;
+}
+.bg-white{
+  background-color:#fff;;
+}
+.bg-yellow{
+  background-color:#DEAF2C;
+}
+.bg-gold{
+  background-color: #D6812B;
+}
+.bg-blackish{
+  background-color: #333;
+}
+.bg-reddish{
+  background-color: #CC3333
+}
+table.no-border tbody{
+  border:none;
+}
+table.bg-gold{
+  background-color: #D6812B;
+}
+table.bg-gold tbody{
+  background-color: #D6812B;
+}
+table.bg-gold tbody tr{
+  background-color: #D6812B;
+}
+.color-blue{
+  color:hsl(183, 100%, 40%);
+}
+.color-blueer{
+  color: #257070;
+}
+.color-white{
+  color:#fff;;
+}
+.color-yellow{
+  color:#DEAF2C;
+}
+.color-gold{
+  color: #D6812B;
+}
+.color-white{
+  color:#fff;
+}
+.color-reddish{
+  color: #CC3333
+}
+.button.bg-reddish:hover,.button.bg-reddish:active,.button.bg-reddish:focus{
+  background-color: #ae2a2a;
+}
+.site-section{
+  min-height:100vh;
+  height:auto;
+  padding: 2em;
+}
+.me-vert{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.head-bar{
+  z-index:99;
+  position:fixed;
+  width:100%;
+}
+.control-cnt {
+  position: relative;
+  width: 100%; height: 600px;
+  min-width: 310px;
+  float: left;
+  background-color: hsl(183, 100%, 40%);
+}
+.control {
+  position: relative;
+  width: 20%; height: 125px;
+  float: left;
+  z-index: 10;
+}
+/* eye */
+.eye {
+  position: relative;
+  width: 300px; height: 300px;
+  margin: 150px auto;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;
+}
+/* eye shadows */
+.eye:before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 310px;
+  height: 150px;
+  top: -10px;
+  left: -5px;
+  -webkit-border-radius: 150px 150px 0 0; -moz-border-radius: 150px 150px 0 0; border-radius: 150px 150px 0 0;
+  border-top: 3px solid hsl(183, 100%, 30%);
+}
+.eye:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 304px;
+  height: 150px;
+  top: 156px;
+  left: -2px;
+  -webkit-border-radius: 0 0 150px 150px; -moz-border-radius: 0 0 150px 150px; border-radius: 0 0 150px 150px;
+  border-bottom: 3px solid hsl(183, 100%, 30%);
+}
+/* blue eye and shadow */
+.eye-inside-cnt {
+  position: absolute;
+  width: 150px; height: 150px;
+  margin: 75px;
+}
+.eye-inside {
+  width: 150px; height: 150px;
+  background-color: hsl(183, 100%, 40%);
+  -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;
+  overflow: hidden;
+}
+.eye-inside-cnt:before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 156px;
+  height: 156px;
+  top: -4px;
+  left: -4px;
+  -webkit-border-radius: 150px; -moz-border-radius: 150px; border-radius: 150px;
+  border: 2px solid #E7E7E7;
+  border-right: none; border-bottom: none;
+}
+/* eye inside (black) */
+.eye-really-inside {
+  width: 100px; height: 100px;
+  margin-top: 25px;
+  margin-left: 25px;
+  background-color: #000;
+  -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;
+  -webkit-transition: 0.1s linear; -moz-transition: 0.1s linear; transition: 0.1s linear;
+}
+/* hovers to change eye-inside position */
+/* line 1 */
+.hover-1:hover ~ .eye .eye-inside .eye-really-inside { margin-top: -12px; margin-left: 0; }
+.hover-2:hover ~ .eye .eye-inside .eye-really-inside { margin-top: -12px; margin-left: 12px; }
+.hover-3:hover ~ .eye .eye-inside .eye-really-inside { margin-top: -12px; margin-left: 25px; }
+.hover-4:hover ~ .eye .eye-inside .eye-really-inside { margin-top: -12px; margin-left: 37px; }
+.hover-5:hover ~ .eye .eye-inside .eye-really-inside { margin-top: -12px; margin-left: 50px; }
+/* line 2 */
+.hover-6:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 12px; margin-left: -6px; }
+.hover-7:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 12px; margin-left: 12px; }
+.hover-8:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 12px; margin-left: 25px; }
+.hover-9:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 12px; margin-left: 37px; }
+.hover-10:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 12px; margin-left: 56px; }
+/* line 3*/
+.hover-11:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 25px; margin-left: -12px; }
+.hover-12:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 25px; margin-left: 6px; }
+.hover-13:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 25px; margin-left: 25px; }
+.hover-14:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 25px; margin-left: 43px; }
+.hover-15:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 25px; margin-left: 62px; }
+/* line 4 */
+.hover-16:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 37px; margin-left: -6px; }
+.hover-17:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 37px; margin-left: 12px; }
+.hover-18:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 37px; margin-left: 25px; }
+.hover-19:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 37px; margin-left: 37px; }
+.hover-20:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 37px; margin-left: 56px; }
+/* line 5 */
+.hover-21:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 62px; margin-left: 0px; }
+.hover-22:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 62px; margin-left: 12px; }
+.hover-23:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 62px; margin-left: 25px; }
+.hover-24:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 62px; margin-left: 37px; }
+.hover-25:hover ~ .eye .eye-inside .eye-really-inside { margin-top: 62px; margin-left: 50px; }
+/* text */

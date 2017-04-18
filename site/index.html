@@ -1,0 +1,238 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eyetracker.js - Eyetracking</title>
+    <!--Reset CSS - Minified CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!-- Foundation Sites(6) - Minified CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
+    <!-- Site CSS-->
+    <link rel="stylesheet" href="resources/css/app.css">
+  </head>
+  <body>
+  <!-- Main Layout-->
+  <div class="row expanded bg-blackish head-bar">
+    <div class="row">
+      <ul class="horizontal menu color-yellow" data-magellan>
+        <li><a href="#first"><i class="fa fa-arrow-circle-up"></i></a></li>
+        <li><a href="#second">About</a></li>
+        <li><a href="#third">The Problem</a></li>
+        <li><a href="#fourth">The Solution</a></li>
+        <li><a href="#fifth">Project links</a></li>
+        <li><a href="#sixth">BuiltWith</a></li>
+      </ul>
+    </div>
+  </div>
+
+<div id="first" data-magellan-target="first" class="site-section row expanded bg-blue">
+  <div class="row">
+    <!--Eye from CodePen by Pedro Campos https://codepen.io/pedrocampos/pen/ADdtl -->
+    <div class="control-cnt">
+      <div class="control hover-1"></div>
+      <div class="control hover-2"></div>
+      <div class="control hover-3"></div>
+      <div class="control hover-4"></div>
+      <div class="control hover-5"></div>
+      <div class="control hover-6"></div>
+      <div class="control hover-7"></div>
+      <div class="control hover-8"></div>
+      <div class="control hover-9"></div>
+      <div class="control hover-10"></div>
+      <div class="control hover-11"></div>
+      <div class="control hover-12"></div>
+      <div class="control hover-13"></div>
+      <div class="control hover-14"></div>
+      <div class="control hover-15"></div>
+      <div class="control hover-16"></div>
+      <div class="control hover-17"></div>
+      <div class="control hover-18"></div>
+      <div class="control hover-19"></div>
+      <div class="control hover-20"></div>
+      <div class="control hover-21"></div>
+      <div class="control hover-22"></div>
+      <div class="control hover-23"></div>
+      <div class="control hover-24"></div>
+      <div class="control hover-25"></div>
+
+      <div class="eye">
+        <div class="eye-inside-cnt">
+          <div class="eye-inside">
+            <div class="eye-really-inside"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="text-center color-white">EyeTracker.js</h1>
+  </div>
+</div>
+
+<div id="second" data-magellan-target="second" class="site-section row expanded bg-gold">
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="responsive-embed widescreen">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/61Ygqr_c7QQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  <div class="row">
+    <div class="small-12 medium-6 columns">
+      <h3>About</h3>
+      <p>Eyetracker JS is a project completed for the course CS582- Data Visualizations at <a href='http://wpi.edu' target="_blank">Worcester Polytechnic Institute</a>.</p>
+    </div>
+    <div class="small-12 medium-6 columns">
+      <h3>Authors</h3>
+      <p>The project team includes:</p>
+      <table class="bg-gold no-border">
+        <tbody>
+          <tr>
+            <td>Chris Chagnon</td>
+            <td><a href="https://github.com/cjchagnon"><i class="fa fa-github"></i> cjchagnon</a></td>
+            <td><a href="mailto:cjchagnon@wpi.edu"><i class="fa fa-envelope"></i> cjchagnon@wpi.edu</a></td>
+          </tr>
+          <tr>
+            <td>Jeffrey Estrada</td>
+            <td><a href="https://github.com/jestradaramos"><i class="fa fa-github"></i> jestradaramos</a></td>
+            <td><a href="mailto:jestrada@wpi.edu"><i class="fa fa-envelope"></i> jestrada@wpi.edu</a></td>
+          </tr>
+          <tr>
+            <td>Tiffany Vo</td>
+            <td><a href="https://github.com/ttranvo"><i class="fa fa-github"></i> ttranvo</a></td>
+            <td><a href="mailto:ttvo@wpi.edu"><i class="fa fa-envelope"></i> ttvo@wpi.edu</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="third" data-magellan-target="third" class="site-section row expanded bg-reddish">
+  <div class="row">
+    <div class="small-12 medium-8 medium-push-2 columns">
+      <div class="row">
+        <div class="small-12 columns">
+          <h2 class="text-center">The Problem</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <h3 class="text-center"><i class="fa fa-share-alt"></i></h3>
+          <h3 class="text-center">Sharing</h3>
+          <p class="text-center">Sharing eye-tracking data in a meaningful way is not easy; the leading manufacturers of eye tracking software lock down their visualizations to proprietary formats, which require expensive software to use and modify. This means that eye-tracking labs must find workarounds, or create reports and exports, which can lose or change meaning.</p>
+        </div>
+        <div class="small-12 columns">
+          <h3 class="text-center"><i class="fa fa-object-group"></i></h3>
+          <h3 class="text-center">Manipulating</h3>
+          <p class="text-center">When working with exports and reports, the viewer loses the ability to manipulate the visualizations. Tracking exports are, typically, static formats such as images, which are rendered once. </p>
+        </div>
+        <div class="small-12 columns">
+          <h3 class="text-center"><i class="fa fa-fast-forward"></i></h3>
+          <h3 class="text-center">Agility</h3>
+          <p class="text-center">Static data is hard to derive meaning from, or to juxtapose with other data. A rendered image can show a summary but not a narrative. It also exists only for the time in which it was rendered. Any new data updates or additions require an entirely new image to be created. This can be cumbersome and relies on keeping in contact with the technician that created the initial renders.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="fourth" data-magellan-target="fourth" class="site-section row expanded bg-white">
+  <div class="row">
+    <div class="small-12 columns">
+      <h2>The Solution</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 medium-4 columns text-center">
+      <img src="resources/img/vis-1.png">
+    </div>
+    <div class="small-12 medium-8 columns">
+      <h3>Eyetracker.js</h3>
+      <p>Eyetracker.js provides User Experience Designers and Technicians with the ability to share their data in an interactive way that is familiar to their users.</p>
+    </div>
+  </div>
+
+  <div class="row me-vert">
+    <div class="small-12 medium-4 columns text-center">
+      <img src="resources/img/vis-2.png">
+    </div>
+    <div class="small-12 medium-8 columns">
+      <h3>Gaze Plots</h3>
+      <p>The tool creates familiar renderings such as the gaze plot, which allows for the viewer to see the major 'fixations' and 'saccades' for the dataset in a sequential order.</p>
+    </div>
+  </div>
+
+  <div class="row me-vert">
+    <div class="small-12 medium-4 columns text-center">
+      <img src="resources/img/vis-3.png">
+    </div>
+    <div class="small-12 medium-8 columns">
+      <h3>Heat Maps</h3>
+      <p>Another standby in eye-tracking visualizations is the Heat Map, which shows areas of interest based on the frequency in which a viewer looked at them. Eyetracker.js renders the Heat map in real time and adds it right into the same display for comparison to the other visualization idioms.</p>
+    </div>
+  </div>
+
+  <div class="row me-vert">
+    <div class="small-12 medium-4 columns text-center">
+      <img src="resources/img/vis-4.png">
+    </div>
+    <div class="small-12 medium-8 columns">
+      <h3>Playback</h3>
+      <p>The tool used the idiom of a video player to allow viewers to manipulate data in real time. In showing the data this way, clients whoa re familiar with streaming players like YouTube, Netflix, or Vimeo can easily interact with the data in a meaningful and intuitive way.</p>
+    </div>
+  </div>
+
+</div>
+
+<div id="fifth" data-magellan-target="fifth" class="site-section row expanded bg-blue">
+  <div class="row">
+    <div class="small-12 medium-6 medium-offset-3 columns">
+      <h2 class="text-center">Project Links</h2>
+      <a class="button bg-reddish large expanded" target="_blank" href="https://cjchagnon.github.io/DataVisFinal/site/vis.html"><i class="fa fa-wrench"></i> The Tool</a>
+      <a class="button bg-reddish large expanded" target="_blank" href="https://github.com/cjchagnon/DataVisFinal"><i class="fa fa-github"></i> Git</a>
+      <a class="button bg-reddish large expanded" target="_blank" href="resources/docs/Process-Book.pdf"><i class="fa fa-file-pdf-o"></i> Process Book</a>
+      <a class="button bg-reddish large expanded" target="_blank" href="https://www.youtube.com/watch?v=61Ygqr_c7QQ"><i class="fa fa-film"></i> ScreenCast Video</a>
+    </div>
+  </div>
+</div>
+
+<div id="sixth" data-magellan-target="sixth" class="site-section row expanded bg-blackish color-white">
+  <div class="row">
+    <div class="small-12 columns">
+      <h2>Built With</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 medium-6 columns">
+      <p>This Project was Built With</p>
+      <ul>
+        <li><a href="http://foundation.zurb.com">Foundation Sites</a></li>
+        <li><a href="http://fontawesome.io/">FontAwesome</a></li>
+        <li><a href="http://jquery.org">jQuery</a></li>
+        <li><a href="https://d3js.org/">D3js</a></li>
+      </ul>
+    </div>
+    <div class="small-12 medium-6 columns">
+      <p>A special thanks to the following Code Examples</p>
+      <ul>
+        <li><a href="https://codepen.io/pedrocampos/pen/ADdtl">Pedro Campos - Eye CSS</a></li>
+        <li><a href="http://bl.ocks.org/mbostock/3202354">Mike Bostock - Heatmaps in d3</a></li>
+        <li><a href="http://bl.ocks.org/weiglemc/6185069">Michele Weigle - Scatterplots in d3</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <!-- Load Scripts after content -->
+  <!-- JQuery - Minified JavaScript CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
+  <!-- Foundation Sites(6) - Minified JavaScript CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+  <!-- Font Awesome - Minified JavaScript CDN -->
+    <script src="https://use.fontawesome.com/3a760d0b50.js"></script>
+</body>
+</html>
