@@ -1,0 +1,139 @@
+<style>
+  .line{
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2px;
+  }
+  .dot{
+    stroke: white;
+  }
+  .rect{
+    background-image: url ("/Users/rohit/Desktop/bestbuyads.png");
+  }
+</style>
+
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+  var margin = {top: 20, right: 20, bottom: 30, left: 20},
+    width = 649 - margin.left - margin.right,
+    height = 475 - margin.top - margin.bottom;
+
+  var g = d3.scaleLinear()
+          .domain([0,1000])
+          .rangeRound([5,20]);
+  
+  var line = d3.line()
+        .defined(function(d) { return d; })
+        .x(function(d) {  return +d.X;})
+        .y(function(d) {  return +d.Y; });
+
+
+ imageUrl="/Users/rohit/Desktop/bestbuyads.png"
+
+  var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+  var clips = svg.append("defs")
+            .append("mask")
+            .attr("id" ,"mask");
+
+  var defs = svg.append("defs");
+
+  var filterbg = defs.append("filter")
+            .attr("id", "blur");
+    
+            filterbg.append("feGaussianBlur")
+            .attr("stdDeviation", 15);
+
+   
+
+  var repeat = [];
+  d3.csv("/Users/rohit/Desktop/data.csv", function(error, data){
+    data = data.filter(function(d){
+        if ((d.FixationPointX == 0 && d.FixationPointY == 0) || repeat.includes(d.FixationPointX)) {
+          //console.log("yes")
+          //console.log(d.FixationPointX);
+          //console.log(repeat);
+          return false;
+        }
+        repeat.push(d.FixationPointX);
+        d.X = +d.FixationPointX;
+        d.Y = +d.FixationPointY;
+        d.dur = +d.GazeEventDuration;
+        d.index = +d.FixationIndex;
+        //console.log("else")
+        //console.log(repeat);
+        return true;
+      });
+    
+    // Upper Layer having blur image
+
+        svg.append("image")
+            .attr("filter" ,"url(#blur)")
+            .attr("xlink:href", imageUrl)
+            .attr("width", width)
+            .attr("height", height)
+            .attr("fill", "#336699")
+    
+    // Lower layer with unblur image
+
+  var mask = svg.append("image")
+            .attr("xlink:href", imageUrl)
+            .attr("mask", "url(#mask)")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("filter", "url(#blur2")
+            .attr("fill", "#336699")
+
+
+  function addMask(){
+    //To achieve the unblur effect, we add circles to the clip mask
+    var clip = clips.selectAll(".dot")
+                .data(data)
+                .enter().append("g")
+                .attr("class", "fixtation")
+                .append("circle")
+                .attr("class", "dot")
+                .attr("cx", function(d) {return d.X; })
+                .attr("cy", function(d) {return d.Y; })
+                .attr("r", function(d) {return g(1.5* d.dur);})
+                .attr("fill", "#ffffff")
+
+
+              
+           
+};   
+
+
+window.onload=addMask()
+
+
+  });
+
+function blur() {
+      filterbg.attr("stdDeviation", this.value / 5);
+            
+}
+
+     
+
+//
+//var ourG = svg.selectAll(".dot")
+    //  .data(data)
+    //  .enter().append("g")
+    //  .attr("class" , "fixation");
+    //ourG.append("circle")
+    //  .attr("class","dot")
+    //  .attr("fill-opacity" , 0.5)
+    //  .attr("r",function(d) { return g(d.dur);})
+    //  .attr("cx",function(d) { return d.X; })
+    //  .attr("cy", function(d) { return d.Y; })
+      //.attr("filter", "url(#blur)")
+
+//
+
+</script>
+</body>
