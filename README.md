@@ -8,7 +8,7 @@ Final Project - Interactive Data Visualization
 
 
 ## Libraries and code
-- The Visualziations were drawn in D3 V3;
+- The Visualziations were drawn in D3 V4;
 
 ## Overview
 ![Image of tool](site/resources/img/vis-1.png)
